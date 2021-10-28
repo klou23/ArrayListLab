@@ -1,10 +1,10 @@
 public class LinkedList {
 
-    Node n;
+    Node head;
     int size;
 
     public LinkedList() {
-        n = null;
+        head = new Node();
         size = 0;
     }
 }
