@@ -1,10 +1,10 @@
-public class LinkedList {
+public class LinkedList<T> {
 
-    Node head;
+    Node<T> head;
     int size;
 
     public LinkedList() {
-        head = new Node();
+        head = new Node<T>();
         size = 0;
     }
 
