@@ -7,4 +7,6 @@ public class LinkedList {
         head = new Node();
         size = 0;
     }
+
+
 }

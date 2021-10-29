@@ -41,6 +41,17 @@ public class Node<T>{//using type T syntax
         this.value = value;
     }
 
+    public T remove(int i){
+        if(i > 0){
+            if(child == null) throw new IndexOutOfBoundsException();
+            return child.remove(i-1);
+        }
+        T returnVal = value;
+        parent.setChild(child);
+        child.setParent(parent);
+        return returnVal;
+    }
+
     public String toString(){//to string method
         if (value == null) return "";
         else return "Node: "+ value.toString();
