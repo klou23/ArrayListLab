@@ -8,5 +8,9 @@ public class LinkedList<T> {
         size = 0;
     }
 
-
+    public T remove(int i){
+        if(i > size) return null;
+        size--;
+        return head.remove(i+1);
+    }
 }

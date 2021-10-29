@@ -52,6 +52,8 @@ public class Node<T>{//using type T syntax
         return returnVal;
     }
 
+
+
     public String toString(){//to string method
         if (value == null) return "";
         else return "Node: "+ value.toString();
