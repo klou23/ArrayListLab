@@ -7,4 +7,15 @@ public class LinkedList<T> {
         head = new Node<T>();
         size = 0;
     }
+
+    public T set(int i, T data) {
+        if(i > size) throw new IndexOutOfBoundsException();
+        return head.set(i+1, data);
+    }   
+
+    public int size(){
+        return size;
+    }
+
 }
+
