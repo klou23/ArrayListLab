@@ -52,7 +52,13 @@ public class Node<T>{//using type T syntax
         return returnVal;
     }
 
-
+    public T get(int i){
+        if(i > 0){
+            if(child == null) throw new IndexOutOfBoundsException();
+            return child.get(i-1);
+        }
+        return value;
+    }
 
     public String toString(){//to string method
         if (value == null) return "";

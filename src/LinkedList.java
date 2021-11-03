@@ -9,8 +9,13 @@ public class LinkedList<T> {
     }
 
     public T remove(int i){
-        if(i > size) return null;
+        if(i > size) throw new IndexOutOfBoundsException();
         size--;
         return head.remove(i+1);
+    }
+
+    public T get(int i){
+        if(i > size) throw new IndexOutOfBoundsException();
+        return head.get(i+1);
     }
 }
