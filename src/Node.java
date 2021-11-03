@@ -1,3 +1,7 @@
+/** Node Class by Trent
+ *  Used for ArrayList project Using Nodes
+ *  Collaborators: Trent Blair, Kevin Lou, Lily Zook
+ */
 public class Node<T>{//using type T syntax
 
     private Node<T> child;
@@ -58,6 +62,16 @@ public class Node<T>{//using type T syntax
             return child.get(i-1);
         }
         return value;
+    }
+
+    public T set(int i, T data) {
+        if (i > 0) {
+            if (child == null) throw new IndexOutOfBoundsException();
+            return child.set(i, data);
+        }
+        T returnVal = value;
+        setValue(data);
+        return returnVal;
     }
 
     public String toString(){//to string method
