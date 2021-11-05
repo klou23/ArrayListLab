@@ -53,5 +53,33 @@ public class Node<T>{//using type T syntax
             return false;
         } else return this.value == node.value;
     }
+
+    public boolean add(T data) {
+        if (child != null) {
+            return child.add(data);
+
+        }
+
+        Node<T> n = new Node<>(data);
+        child = n;
+        n.parent = this;
+
+        return true;
+    }
+
+    void add(int i, T data){
+
+        if (i > 0){
+            if (child == null) throw new IndexOutOfBoundsException();
+
+            child.add(i-1, data);
+            return;
+        }
+
+        Node<T> n = new Node<>(data);
+        n.child = this;
+        this.parent = n.parent;
+
+    }
 }
 
